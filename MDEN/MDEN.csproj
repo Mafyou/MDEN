@@ -1,0 +1,886 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1B1DC75-1A0E-4674-A808-1845422C28F5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDEN</RootNamespace>
+    <AssemblyName>MDEN</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\portefolio.css" />
+    <Content Include="css\style.css" />
+    <Content Include="img\adp.svg" />
+    <Content Include="img\avanade.jpg" />
+    <Content Include="img\cgi.png" />
+    <Content Include="img\educ.png" />
+    <Content Include="img\eurovia.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\fg-cgi.jpg" />
+    <Content Include="img\fg-hawaii.png" />
+    <Content Include="img\fg-vNext.png" />
+    <Content Include="img\git.svg" />
+    <Content Include="img\hawaii.jpg" />
+    <Content Include="img\ladef.jpg" />
+    <Content Include="img\linkedin.png" />
+    <Content Include="img\loreal.jpg" />
+    <Content Include="img\m.jpg" />
+    <Content Include="img\mailto.png" />
+    <Content Include="img\me.jpg" />
+    <Content Include="img\onisep.png" />
+    <Content Include="img\pdf.png" />
+    <Content Include="img\raw\Image01.JPG" />
+    <Content Include="img\raw\Image02.JPG" />
+    <Content Include="img\raw\Image03.JPG" />
+    <Content Include="img\raw\Image04.JPG" />
+    <Content Include="img\raw\Image05.JPG" />
+    <Content Include="img\raw\Image06.JPG" />
+    <Content Include="img\raw\Image07.JPG" />
+    <Content Include="img\raw\Image08.JPG" />
+    <Content Include="img\raw\Image09.JPG" />
+    <Content Include="img\raw\Image10.JPG" />
+    <Content Include="img\raw\Image100.JPG" />
+    <Content Include="img\raw\Image101.JPG" />
+    <Content Include="img\raw\Image102.JPG" />
+    <Content Include="img\raw\Image103.JPG" />
+    <Content Include="img\raw\Image104.JPG" />
+    <Content Include="img\raw\Image105.JPG" />
+    <Content Include="img\raw\Image106.JPG" />
+    <Content Include="img\raw\Image107.JPG" />
+    <Content Include="img\raw\Image108.JPG" />
+    <Content Include="img\raw\Image109.JPG" />
+    <Content Include="img\raw\Image11.JPG" />
+    <Content Include="img\raw\Image110.JPG" />
+    <Content Include="img\raw\Image111.JPG" />
+    <Content Include="img\raw\Image112.JPG" />
+    <Content Include="img\raw\Image113.JPG" />
+    <Content Include="img\raw\Image114.JPG" />
+    <Content Include="img\raw\Image115.JPG" />
+    <Content Include="img\raw\Image116.JPG" />
+    <Content Include="img\raw\Image117.JPG" />
+    <Content Include="img\raw\Image118.JPG" />
+    <Content Include="img\raw\Image119.JPG" />
+    <Content Include="img\raw\Image12.JPG" />
+    <Content Include="img\raw\Image120.JPG" />
+    <Content Include="img\raw\Image121.JPG" />
+    <Content Include="img\raw\Image122.JPG" />
+    <Content Include="img\raw\Image123.JPG" />
+    <Content Include="img\raw\Image124.JPG" />
+    <Content Include="img\raw\Image125.JPG" />
+    <Content Include="img\raw\Image126.JPG" />
+    <Content Include="img\raw\Image127.JPG" />
+    <Content Include="img\raw\Image128.JPG" />
+    <Content Include="img\raw\Image129.JPG" />
+    <Content Include="img\raw\Image13.JPG" />
+    <Content Include="img\raw\Image130.JPG" />
+    <Content Include="img\raw\Image131.JPG" />
+    <Content Include="img\raw\Image132.JPG" />
+    <Content Include="img\raw\Image133.JPG" />
+    <Content Include="img\raw\Image134.JPG" />
+    <Content Include="img\raw\Image135.JPG" />
+    <Content Include="img\raw\Image136.JPG" />
+    <Content Include="img\raw\Image137.JPG" />
+    <Content Include="img\raw\Image138.JPG" />
+    <Content Include="img\raw\Image139.JPG" />
+    <Content Include="img\raw\Image14.JPG" />
+    <Content Include="img\raw\Image140.JPG" />
+    <Content Include="img\raw\Image141.JPG" />
+    <Content Include="img\raw\Image142.JPG" />
+    <Content Include="img\raw\Image143.JPG" />
+    <Content Include="img\raw\Image144.JPG" />
+    <Content Include="img\raw\Image145.JPG" />
+    <Content Include="img\raw\Image146.JPG" />
+    <Content Include="img\raw\Image147.JPG" />
+    <Content Include="img\raw\Image148.JPG" />
+    <Content Include="img\raw\Image149.JPG" />
+    <Content Include="img\raw\Image15.JPG" />
+    <Content Include="img\raw\Image150.JPG" />
+    <Content Include="img\raw\Image151.JPG" />
+    <Content Include="img\raw\Image152.JPG" />
+    <Content Include="img\raw\Image153.JPG" />
+    <Content Include="img\raw\Image154.JPG" />
+    <Content Include="img\raw\Image155.JPG" />
+    <Content Include="img\raw\Image156.JPG" />
+    <Content Include="img\raw\Image157.JPG" />
+    <Content Include="img\raw\Image158.JPG" />
+    <Content Include="img\raw\Image159.JPG" />
+    <Content Include="img\raw\Image16.JPG" />
+    <Content Include="img\raw\Image160.JPG" />
+    <Content Include="img\raw\Image161.JPG" />
+    <Content Include="img\raw\Image162.JPG" />
+    <Content Include="img\raw\Image163.JPG" />
+    <Content Include="img\raw\Image164.JPG" />
+    <Content Include="img\raw\Image165.JPG" />
+    <Content Include="img\raw\Image166.JPG" />
+    <Content Include="img\raw\Image167.JPG" />
+    <Content Include="img\raw\Image168.JPG" />
+    <Content Include="img\raw\Image169.JPG" />
+    <Content Include="img\raw\Image17.JPG" />
+    <Content Include="img\raw\Image170.JPG" />
+    <Content Include="img\raw\Image171.JPG" />
+    <Content Include="img\raw\Image172.JPG" />
+    <Content Include="img\raw\Image173.JPG" />
+    <Content Include="img\raw\Image174.JPG" />
+    <Content Include="img\raw\Image175.JPG" />
+    <Content Include="img\raw\Image176.JPG" />
+    <Content Include="img\raw\Image177.JPG" />
+    <Content Include="img\raw\Image178.JPG" />
+    <Content Include="img\raw\Image179.JPG" />
+    <Content Include="img\raw\Image18.JPG" />
+    <Content Include="img\raw\Image180.JPG" />
+    <Content Include="img\raw\Image181.JPG" />
+    <Content Include="img\raw\Image182.JPG" />
+    <Content Include="img\raw\Image183.JPG" />
+    <Content Include="img\raw\Image184.JPG" />
+    <Content Include="img\raw\Image185.JPG" />
+    <Content Include="img\raw\Image186.JPG" />
+    <Content Include="img\raw\Image187.JPG" />
+    <Content Include="img\raw\Image188.JPG" />
+    <Content Include="img\raw\Image189.JPG" />
+    <Content Include="img\raw\Image19.JPG" />
+    <Content Include="img\raw\Image190.JPG" />
+    <Content Include="img\raw\Image191.JPG" />
+    <Content Include="img\raw\Image192.JPG" />
+    <Content Include="img\raw\Image193.JPG" />
+    <Content Include="img\raw\Image194.JPG" />
+    <Content Include="img\raw\Image195.JPG" />
+    <Content Include="img\raw\Image196.JPG" />
+    <Content Include="img\raw\Image197.JPG" />
+    <Content Include="img\raw\Image198.JPG" />
+    <Content Include="img\raw\Image199.JPG" />
+    <Content Include="img\raw\Image20.JPG" />
+    <Content Include="img\raw\Image200.JPG" />
+    <Content Include="img\raw\Image201.JPG" />
+    <Content Include="img\raw\Image202.JPG" />
+    <Content Include="img\raw\Image203.JPG" />
+    <Content Include="img\raw\Image204.JPG" />
+    <Content Include="img\raw\Image205.JPG" />
+    <Content Include="img\raw\Image206.JPG" />
+    <Content Include="img\raw\Image207.JPG" />
+    <Content Include="img\raw\Image208.JPG" />
+    <Content Include="img\raw\Image209.JPG" />
+    <Content Include="img\raw\Image21.JPG" />
+    <Content Include="img\raw\Image210.JPG" />
+    <Content Include="img\raw\Image211.JPG" />
+    <Content Include="img\raw\Image212.JPG" />
+    <Content Include="img\raw\Image213.JPG" />
+    <Content Include="img\raw\Image214.JPG" />
+    <Content Include="img\raw\Image215.JPG" />
+    <Content Include="img\raw\Image216.JPG" />
+    <Content Include="img\raw\Image217.JPG" />
+    <Content Include="img\raw\Image218.JPG" />
+    <Content Include="img\raw\Image219.JPG" />
+    <Content Include="img\raw\Image22.JPG" />
+    <Content Include="img\raw\Image220.JPG" />
+    <Content Include="img\raw\Image221.JPG" />
+    <Content Include="img\raw\Image222.JPG" />
+    <Content Include="img\raw\Image223.JPG" />
+    <Content Include="img\raw\Image224.JPG" />
+    <Content Include="img\raw\Image225.JPG" />
+    <Content Include="img\raw\Image226.JPG" />
+    <Content Include="img\raw\Image227.JPG" />
+    <Content Include="img\raw\Image228.JPG" />
+    <Content Include="img\raw\Image229.JPG" />
+    <Content Include="img\raw\Image23.JPG" />
+    <Content Include="img\raw\Image230.JPG" />
+    <Content Include="img\raw\Image231.JPG" />
+    <Content Include="img\raw\Image232.JPG" />
+    <Content Include="img\raw\Image233.JPG" />
+    <Content Include="img\raw\Image234.JPG" />
+    <Content Include="img\raw\Image235.JPG" />
+    <Content Include="img\raw\Image236.JPG" />
+    <Content Include="img\raw\Image237.JPG" />
+    <Content Include="img\raw\Image238.JPG" />
+    <Content Include="img\raw\Image239.JPG" />
+    <Content Include="img\raw\Image24.JPG" />
+    <Content Include="img\raw\Image240.JPG" />
+    <Content Include="img\raw\Image241.JPG" />
+    <Content Include="img\raw\Image242.JPG" />
+    <Content Include="img\raw\Image243.JPG" />
+    <Content Include="img\raw\Image244.JPG" />
+    <Content Include="img\raw\Image245.JPG" />
+    <Content Include="img\raw\Image246.JPG" />
+    <Content Include="img\raw\Image247.JPG" />
+    <Content Include="img\raw\Image248.JPG" />
+    <Content Include="img\raw\Image249.JPG" />
+    <Content Include="img\raw\Image25.JPG" />
+    <Content Include="img\raw\Image250.JPG" />
+    <Content Include="img\raw\Image251.JPG" />
+    <Content Include="img\raw\Image252.JPG" />
+    <Content Include="img\raw\Image253.JPG" />
+    <Content Include="img\raw\Image254.JPG" />
+    <Content Include="img\raw\Image255.JPG" />
+    <Content Include="img\raw\Image256.JPG" />
+    <Content Include="img\raw\Image257.JPG" />
+    <Content Include="img\raw\Image258.JPG" />
+    <Content Include="img\raw\Image259.JPG" />
+    <Content Include="img\raw\Image26.JPG" />
+    <Content Include="img\raw\Image260.JPG" />
+    <Content Include="img\raw\Image261.JPG" />
+    <Content Include="img\raw\Image262.JPG" />
+    <Content Include="img\raw\Image263.JPG" />
+    <Content Include="img\raw\Image264.JPG" />
+    <Content Include="img\raw\Image265.JPG" />
+    <Content Include="img\raw\Image266.JPG" />
+    <Content Include="img\raw\Image267.JPG" />
+    <Content Include="img\raw\Image268.JPG" />
+    <Content Include="img\raw\Image269.JPG" />
+    <Content Include="img\raw\Image27.JPG" />
+    <Content Include="img\raw\Image270.JPG" />
+    <Content Include="img\raw\Image271.JPG" />
+    <Content Include="img\raw\Image272.JPG" />
+    <Content Include="img\raw\Image273.JPG" />
+    <Content Include="img\raw\Image274.JPG" />
+    <Content Include="img\raw\Image275.JPG" />
+    <Content Include="img\raw\Image276.JPG" />
+    <Content Include="img\raw\Image277.JPG" />
+    <Content Include="img\raw\Image278.JPG" />
+    <Content Include="img\raw\Image279.JPG" />
+    <Content Include="img\raw\Image28.JPG" />
+    <Content Include="img\raw\Image280.JPG" />
+    <Content Include="img\raw\Image281.JPG" />
+    <Content Include="img\raw\Image282.JPG" />
+    <Content Include="img\raw\Image283.JPG" />
+    <Content Include="img\raw\Image284.JPG" />
+    <Content Include="img\raw\Image285.JPG" />
+    <Content Include="img\raw\Image286.JPG" />
+    <Content Include="img\raw\Image287.JPG" />
+    <Content Include="img\raw\Image288.JPG" />
+    <Content Include="img\raw\Image289.JPG" />
+    <Content Include="img\raw\Image29.JPG" />
+    <Content Include="img\raw\Image290.JPG" />
+    <Content Include="img\raw\Image291.JPG" />
+    <Content Include="img\raw\Image292.JPG" />
+    <Content Include="img\raw\Image293.JPG" />
+    <Content Include="img\raw\Image294.JPG" />
+    <Content Include="img\raw\Image295.JPG" />
+    <Content Include="img\raw\Image296.JPG" />
+    <Content Include="img\raw\Image297.JPG" />
+    <Content Include="img\raw\Image298.JPG" />
+    <Content Include="img\raw\Image299.JPG" />
+    <Content Include="img\raw\Image30.JPG" />
+    <Content Include="img\raw\Image300.JPG" />
+    <Content Include="img\raw\Image301.JPG" />
+    <Content Include="img\raw\Image302.JPG" />
+    <Content Include="img\raw\Image303.JPG" />
+    <Content Include="img\raw\Image304.JPG" />
+    <Content Include="img\raw\Image305.JPG" />
+    <Content Include="img\raw\Image306.JPG" />
+    <Content Include="img\raw\Image307.JPG" />
+    <Content Include="img\raw\Image308.JPG" />
+    <Content Include="img\raw\Image309.JPG" />
+    <Content Include="img\raw\Image31.JPG" />
+    <Content Include="img\raw\Image310.JPG" />
+    <Content Include="img\raw\Image311.JPG" />
+    <Content Include="img\raw\Image312.JPG" />
+    <Content Include="img\raw\Image313.JPG" />
+    <Content Include="img\raw\Image314.JPG" />
+    <Content Include="img\raw\Image315.JPG" />
+    <Content Include="img\raw\Image316.JPG" />
+    <Content Include="img\raw\Image317.JPG" />
+    <Content Include="img\raw\Image318.JPG" />
+    <Content Include="img\raw\Image319.JPG" />
+    <Content Include="img\raw\Image32.JPG" />
+    <Content Include="img\raw\Image320.JPG" />
+    <Content Include="img\raw\Image321.JPG" />
+    <Content Include="img\raw\Image322.JPG" />
+    <Content Include="img\raw\Image323.JPG" />
+    <Content Include="img\raw\Image324.JPG" />
+    <Content Include="img\raw\Image325.JPG" />
+    <Content Include="img\raw\Image326.JPG" />
+    <Content Include="img\raw\Image327.JPG" />
+    <Content Include="img\raw\Image328.JPG" />
+    <Content Include="img\raw\Image329.JPG" />
+    <Content Include="img\raw\Image33.JPG" />
+    <Content Include="img\raw\Image330.JPG" />
+    <Content Include="img\raw\Image331.JPG" />
+    <Content Include="img\raw\Image332.JPG" />
+    <Content Include="img\raw\Image333.JPG" />
+    <Content Include="img\raw\Image334.JPG" />
+    <Content Include="img\raw\Image335.JPG" />
+    <Content Include="img\raw\Image336.JPG" />
+    <Content Include="img\raw\Image337.JPG" />
+    <Content Include="img\raw\Image338.JPG" />
+    <Content Include="img\raw\Image339.JPG" />
+    <Content Include="img\raw\Image34.JPG" />
+    <Content Include="img\raw\Image340.JPG" />
+    <Content Include="img\raw\Image341.JPG" />
+    <Content Include="img\raw\Image342.JPG" />
+    <Content Include="img\raw\Image343.JPG" />
+    <Content Include="img\raw\Image344.JPG" />
+    <Content Include="img\raw\Image345.JPG" />
+    <Content Include="img\raw\Image346.JPG" />
+    <Content Include="img\raw\Image347.JPG" />
+    <Content Include="img\raw\Image348.JPG" />
+    <Content Include="img\raw\Image349.JPG" />
+    <Content Include="img\raw\Image35.JPG" />
+    <Content Include="img\raw\Image36.JPG" />
+    <Content Include="img\raw\Image37.JPG" />
+    <Content Include="img\raw\Image38.JPG" />
+    <Content Include="img\raw\Image39.JPG" />
+    <Content Include="img\raw\Image40.JPG" />
+    <Content Include="img\raw\Image41.JPG" />
+    <Content Include="img\raw\Image42.JPG" />
+    <Content Include="img\raw\Image43.JPG" />
+    <Content Include="img\raw\Image44.JPG" />
+    <Content Include="img\raw\Image45.JPG" />
+    <Content Include="img\raw\Image46.JPG" />
+    <Content Include="img\raw\Image47.JPG" />
+    <Content Include="img\raw\Image48.JPG" />
+    <Content Include="img\raw\Image49.JPG" />
+    <Content Include="img\raw\Image50.JPG" />
+    <Content Include="img\raw\Image51.JPG" />
+    <Content Include="img\raw\Image52.JPG" />
+    <Content Include="img\raw\Image53.JPG" />
+    <Content Include="img\raw\Image54.JPG" />
+    <Content Include="img\raw\Image55.JPG" />
+    <Content Include="img\raw\Image56.JPG" />
+    <Content Include="img\raw\Image57.JPG" />
+    <Content Include="img\raw\Image58.JPG" />
+    <Content Include="img\raw\Image59.JPG" />
+    <Content Include="img\raw\Image60.JPG" />
+    <Content Include="img\raw\Image61.JPG" />
+    <Content Include="img\raw\Image62.JPG" />
+    <Content Include="img\raw\Image63.JPG" />
+    <Content Include="img\raw\Image64.JPG" />
+    <Content Include="img\raw\Image65.JPG" />
+    <Content Include="img\raw\Image66.JPG" />
+    <Content Include="img\raw\Image67.JPG" />
+    <Content Include="img\raw\Image68.JPG" />
+    <Content Include="img\raw\Image69.JPG" />
+    <Content Include="img\raw\Image70.JPG" />
+    <Content Include="img\raw\Image71.JPG" />
+    <Content Include="img\raw\Image72.JPG" />
+    <Content Include="img\raw\Image73.JPG" />
+    <Content Include="img\raw\Image74.JPG" />
+    <Content Include="img\raw\Image75.JPG" />
+    <Content Include="img\raw\Image76.JPG" />
+    <Content Include="img\raw\Image77.JPG" />
+    <Content Include="img\raw\Image78.JPG" />
+    <Content Include="img\raw\Image79.JPG" />
+    <Content Include="img\raw\Image80.JPG" />
+    <Content Include="img\raw\Image81.JPG" />
+    <Content Include="img\raw\Image82.JPG" />
+    <Content Include="img\raw\Image83.JPG" />
+    <Content Include="img\raw\Image84.JPG" />
+    <Content Include="img\raw\Image85.JPG" />
+    <Content Include="img\raw\Image86.JPG" />
+    <Content Include="img\raw\Image87.JPG" />
+    <Content Include="img\raw\Image88.JPG" />
+    <Content Include="img\raw\Image89.JPG" />
+    <Content Include="img\raw\Image90.JPG" />
+    <Content Include="img\raw\Image91.JPG" />
+    <Content Include="img\raw\Image92.JPG" />
+    <Content Include="img\raw\Image93.JPG" />
+    <Content Include="img\raw\Image94.JPG" />
+    <Content Include="img\raw\Image95.JPG" />
+    <Content Include="img\raw\Image96.JPG" />
+    <Content Include="img\raw\Image97.JPG" />
+    <Content Include="img\raw\Image98.JPG" />
+    <Content Include="img\raw\Image99.JPG" />
+    <Content Include="img\resized\Image01.JPG" />
+    <Content Include="img\resized\Image02.JPG" />
+    <Content Include="img\resized\Image03.JPG" />
+    <Content Include="img\resized\Image04.JPG" />
+    <Content Include="img\resized\Image05.JPG" />
+    <Content Include="img\resized\Image06.JPG" />
+    <Content Include="img\resized\Image07.JPG" />
+    <Content Include="img\resized\Image08.JPG" />
+    <Content Include="img\resized\Image09.JPG" />
+    <Content Include="img\resized\Image10.JPG" />
+    <Content Include="img\resized\Image100.JPG" />
+    <Content Include="img\resized\Image101.JPG" />
+    <Content Include="img\resized\Image102.JPG" />
+    <Content Include="img\resized\Image103.JPG" />
+    <Content Include="img\resized\Image104.JPG" />
+    <Content Include="img\resized\Image105.JPG" />
+    <Content Include="img\resized\Image106.JPG" />
+    <Content Include="img\resized\Image107.JPG" />
+    <Content Include="img\resized\Image108.JPG" />
+    <Content Include="img\resized\Image109.JPG" />
+    <Content Include="img\resized\Image11.JPG" />
+    <Content Include="img\resized\Image110.JPG" />
+    <Content Include="img\resized\Image111.JPG" />
+    <Content Include="img\resized\Image112.JPG" />
+    <Content Include="img\resized\Image113.JPG" />
+    <Content Include="img\resized\Image114.JPG" />
+    <Content Include="img\resized\Image115.JPG" />
+    <Content Include="img\resized\Image116.JPG" />
+    <Content Include="img\resized\Image117.JPG" />
+    <Content Include="img\resized\Image118.JPG" />
+    <Content Include="img\resized\Image119.JPG" />
+    <Content Include="img\resized\Image12.JPG" />
+    <Content Include="img\resized\Image120.JPG" />
+    <Content Include="img\resized\Image121.JPG" />
+    <Content Include="img\resized\Image122.JPG" />
+    <Content Include="img\resized\Image123.JPG" />
+    <Content Include="img\resized\Image124.JPG" />
+    <Content Include="img\resized\Image125.JPG" />
+    <Content Include="img\resized\Image126.JPG" />
+    <Content Include="img\resized\Image127.JPG" />
+    <Content Include="img\resized\Image128.JPG" />
+    <Content Include="img\resized\Image129.JPG" />
+    <Content Include="img\resized\Image13.JPG" />
+    <Content Include="img\resized\Image130.JPG" />
+    <Content Include="img\resized\Image131.JPG" />
+    <Content Include="img\resized\Image132.JPG" />
+    <Content Include="img\resized\Image133.JPG" />
+    <Content Include="img\resized\Image134.JPG" />
+    <Content Include="img\resized\Image135.JPG" />
+    <Content Include="img\resized\Image136.JPG" />
+    <Content Include="img\resized\Image137.JPG" />
+    <Content Include="img\resized\Image138.JPG" />
+    <Content Include="img\resized\Image139.JPG" />
+    <Content Include="img\resized\Image14.JPG" />
+    <Content Include="img\resized\Image140.JPG" />
+    <Content Include="img\resized\Image141.JPG" />
+    <Content Include="img\resized\Image142.JPG" />
+    <Content Include="img\resized\Image143.JPG" />
+    <Content Include="img\resized\Image144.JPG" />
+    <Content Include="img\resized\Image145.JPG" />
+    <Content Include="img\resized\Image146.JPG" />
+    <Content Include="img\resized\Image147.JPG" />
+    <Content Include="img\resized\Image148.JPG" />
+    <Content Include="img\resized\Image149.JPG" />
+    <Content Include="img\resized\Image15.JPG" />
+    <Content Include="img\resized\Image150.JPG" />
+    <Content Include="img\resized\Image151.JPG" />
+    <Content Include="img\resized\Image152.JPG" />
+    <Content Include="img\resized\Image153.JPG" />
+    <Content Include="img\resized\Image154.JPG" />
+    <Content Include="img\resized\Image155.JPG" />
+    <Content Include="img\resized\Image156.JPG" />
+    <Content Include="img\resized\Image157.JPG" />
+    <Content Include="img\resized\Image158.JPG" />
+    <Content Include="img\resized\Image159.JPG" />
+    <Content Include="img\resized\Image16.JPG" />
+    <Content Include="img\resized\Image160.JPG" />
+    <Content Include="img\resized\Image161.JPG" />
+    <Content Include="img\resized\Image162.JPG" />
+    <Content Include="img\resized\Image163.JPG" />
+    <Content Include="img\resized\Image164.JPG" />
+    <Content Include="img\resized\Image165.JPG" />
+    <Content Include="img\resized\Image166.JPG" />
+    <Content Include="img\resized\Image167.JPG" />
+    <Content Include="img\resized\Image168.JPG" />
+    <Content Include="img\resized\Image169.JPG" />
+    <Content Include="img\resized\Image17.JPG" />
+    <Content Include="img\resized\Image170.JPG" />
+    <Content Include="img\resized\Image171.JPG" />
+    <Content Include="img\resized\Image172.JPG" />
+    <Content Include="img\resized\Image173.JPG" />
+    <Content Include="img\resized\Image174.JPG" />
+    <Content Include="img\resized\Image175.JPG" />
+    <Content Include="img\resized\Image176.JPG" />
+    <Content Include="img\resized\Image177.JPG" />
+    <Content Include="img\resized\Image178.JPG" />
+    <Content Include="img\resized\Image179.JPG" />
+    <Content Include="img\resized\Image18.JPG" />
+    <Content Include="img\resized\Image180.JPG" />
+    <Content Include="img\resized\Image181.JPG" />
+    <Content Include="img\resized\Image182.JPG" />
+    <Content Include="img\resized\Image183.JPG" />
+    <Content Include="img\resized\Image184.JPG" />
+    <Content Include="img\resized\Image185.JPG" />
+    <Content Include="img\resized\Image186.JPG" />
+    <Content Include="img\resized\Image187.JPG" />
+    <Content Include="img\resized\Image188.JPG" />
+    <Content Include="img\resized\Image189.JPG" />
+    <Content Include="img\resized\Image19.JPG" />
+    <Content Include="img\resized\Image190.JPG" />
+    <Content Include="img\resized\Image191.JPG" />
+    <Content Include="img\resized\Image192.JPG" />
+    <Content Include="img\resized\Image193.JPG" />
+    <Content Include="img\resized\Image194.JPG" />
+    <Content Include="img\resized\Image195.JPG" />
+    <Content Include="img\resized\Image196.JPG" />
+    <Content Include="img\resized\Image197.JPG" />
+    <Content Include="img\resized\Image198.JPG" />
+    <Content Include="img\resized\Image199.JPG" />
+    <Content Include="img\resized\Image20.JPG" />
+    <Content Include="img\resized\Image200.JPG" />
+    <Content Include="img\resized\Image201.JPG" />
+    <Content Include="img\resized\Image202.JPG" />
+    <Content Include="img\resized\Image203.JPG" />
+    <Content Include="img\resized\Image204.JPG" />
+    <Content Include="img\resized\Image205.JPG" />
+    <Content Include="img\resized\Image206.JPG" />
+    <Content Include="img\resized\Image207.JPG" />
+    <Content Include="img\resized\Image208.JPG" />
+    <Content Include="img\resized\Image209.JPG" />
+    <Content Include="img\resized\Image21.JPG" />
+    <Content Include="img\resized\Image210.JPG" />
+    <Content Include="img\resized\Image211.JPG" />
+    <Content Include="img\resized\Image212.JPG" />
+    <Content Include="img\resized\Image213.JPG" />
+    <Content Include="img\resized\Image214.JPG" />
+    <Content Include="img\resized\Image215.JPG" />
+    <Content Include="img\resized\Image216.JPG" />
+    <Content Include="img\resized\Image217.JPG" />
+    <Content Include="img\resized\Image218.JPG" />
+    <Content Include="img\resized\Image219.JPG" />
+    <Content Include="img\resized\Image22.JPG" />
+    <Content Include="img\resized\Image220.JPG" />
+    <Content Include="img\resized\Image221.JPG" />
+    <Content Include="img\resized\Image222.JPG" />
+    <Content Include="img\resized\Image223.JPG" />
+    <Content Include="img\resized\Image224.JPG" />
+    <Content Include="img\resized\Image225.JPG" />
+    <Content Include="img\resized\Image226.JPG" />
+    <Content Include="img\resized\Image227.JPG" />
+    <Content Include="img\resized\Image228.JPG" />
+    <Content Include="img\resized\Image229.JPG" />
+    <Content Include="img\resized\Image23.JPG" />
+    <Content Include="img\resized\Image230.JPG" />
+    <Content Include="img\resized\Image231.JPG" />
+    <Content Include="img\resized\Image232.JPG" />
+    <Content Include="img\resized\Image233.JPG" />
+    <Content Include="img\resized\Image234.JPG" />
+    <Content Include="img\resized\Image235.JPG" />
+    <Content Include="img\resized\Image236.JPG" />
+    <Content Include="img\resized\Image237.JPG" />
+    <Content Include="img\resized\Image238.JPG" />
+    <Content Include="img\resized\Image239.JPG" />
+    <Content Include="img\resized\Image24.JPG" />
+    <Content Include="img\resized\Image240.JPG" />
+    <Content Include="img\resized\Image241.JPG" />
+    <Content Include="img\resized\Image242.JPG" />
+    <Content Include="img\resized\Image243.JPG" />
+    <Content Include="img\resized\Image244.JPG" />
+    <Content Include="img\resized\Image245.JPG" />
+    <Content Include="img\resized\Image246.JPG" />
+    <Content Include="img\resized\Image247.JPG" />
+    <Content Include="img\resized\Image248.JPG" />
+    <Content Include="img\resized\Image249.JPG" />
+    <Content Include="img\resized\Image25.JPG" />
+    <Content Include="img\resized\Image250.JPG" />
+    <Content Include="img\resized\Image251.JPG" />
+    <Content Include="img\resized\Image252.JPG" />
+    <Content Include="img\resized\Image253.JPG" />
+    <Content Include="img\resized\Image254.JPG" />
+    <Content Include="img\resized\Image255.JPG" />
+    <Content Include="img\resized\Image256.JPG" />
+    <Content Include="img\resized\Image257.JPG" />
+    <Content Include="img\resized\Image258.JPG" />
+    <Content Include="img\resized\Image259.JPG" />
+    <Content Include="img\resized\Image26.JPG" />
+    <Content Include="img\resized\Image260.JPG" />
+    <Content Include="img\resized\Image261.JPG" />
+    <Content Include="img\resized\Image262.JPG" />
+    <Content Include="img\resized\Image263.JPG" />
+    <Content Include="img\resized\Image264.JPG" />
+    <Content Include="img\resized\Image265.JPG" />
+    <Content Include="img\resized\Image266.JPG" />
+    <Content Include="img\resized\Image267.JPG" />
+    <Content Include="img\resized\Image268.JPG" />
+    <Content Include="img\resized\Image269.JPG" />
+    <Content Include="img\resized\Image27.JPG" />
+    <Content Include="img\resized\Image270.JPG" />
+    <Content Include="img\resized\Image271.JPG" />
+    <Content Include="img\resized\Image272.JPG" />
+    <Content Include="img\resized\Image273.JPG" />
+    <Content Include="img\resized\Image274.JPG" />
+    <Content Include="img\resized\Image275.JPG" />
+    <Content Include="img\resized\Image276.JPG" />
+    <Content Include="img\resized\Image277.JPG" />
+    <Content Include="img\resized\Image278.JPG" />
+    <Content Include="img\resized\Image279.JPG" />
+    <Content Include="img\resized\Image28.JPG" />
+    <Content Include="img\resized\Image280.JPG" />
+    <Content Include="img\resized\Image281.JPG" />
+    <Content Include="img\resized\Image282.JPG" />
+    <Content Include="img\resized\Image283.JPG" />
+    <Content Include="img\resized\Image284.JPG" />
+    <Content Include="img\resized\Image285.JPG" />
+    <Content Include="img\resized\Image286.JPG" />
+    <Content Include="img\resized\Image287.JPG" />
+    <Content Include="img\resized\Image288.JPG" />
+    <Content Include="img\resized\Image289.JPG" />
+    <Content Include="img\resized\Image29.JPG" />
+    <Content Include="img\resized\Image290.JPG" />
+    <Content Include="img\resized\Image291.JPG" />
+    <Content Include="img\resized\Image292.JPG" />
+    <Content Include="img\resized\Image293.JPG" />
+    <Content Include="img\resized\Image294.JPG" />
+    <Content Include="img\resized\Image295.JPG" />
+    <Content Include="img\resized\Image296.JPG" />
+    <Content Include="img\resized\Image297.JPG" />
+    <Content Include="img\resized\Image298.JPG" />
+    <Content Include="img\resized\Image299.JPG" />
+    <Content Include="img\resized\Image30.JPG" />
+    <Content Include="img\resized\Image300.JPG" />
+    <Content Include="img\resized\Image301.JPG" />
+    <Content Include="img\resized\Image302.JPG" />
+    <Content Include="img\resized\Image303.JPG" />
+    <Content Include="img\resized\Image304.JPG" />
+    <Content Include="img\resized\Image305.JPG" />
+    <Content Include="img\resized\Image306.JPG" />
+    <Content Include="img\resized\Image307.JPG" />
+    <Content Include="img\resized\Image308.JPG" />
+    <Content Include="img\resized\Image309.JPG" />
+    <Content Include="img\resized\Image31.JPG" />
+    <Content Include="img\resized\Image310.JPG" />
+    <Content Include="img\resized\Image311.JPG" />
+    <Content Include="img\resized\Image312.JPG" />
+    <Content Include="img\resized\Image313.JPG" />
+    <Content Include="img\resized\Image314.JPG" />
+    <Content Include="img\resized\Image315.JPG" />
+    <Content Include="img\resized\Image316.JPG" />
+    <Content Include="img\resized\Image317.JPG" />
+    <Content Include="img\resized\Image318.JPG" />
+    <Content Include="img\resized\Image319.JPG" />
+    <Content Include="img\resized\Image32.JPG" />
+    <Content Include="img\resized\Image320.JPG" />
+    <Content Include="img\resized\Image321.JPG" />
+    <Content Include="img\resized\Image322.JPG" />
+    <Content Include="img\resized\Image323.JPG" />
+    <Content Include="img\resized\Image324.JPG" />
+    <Content Include="img\resized\Image325.JPG" />
+    <Content Include="img\resized\Image326.JPG" />
+    <Content Include="img\resized\Image327.JPG" />
+    <Content Include="img\resized\Image328.JPG" />
+    <Content Include="img\resized\Image329.JPG" />
+    <Content Include="img\resized\Image33.JPG" />
+    <Content Include="img\resized\Image330.JPG" />
+    <Content Include="img\resized\Image331.JPG" />
+    <Content Include="img\resized\Image332.JPG" />
+    <Content Include="img\resized\Image333.JPG" />
+    <Content Include="img\resized\Image334.JPG" />
+    <Content Include="img\resized\Image335.JPG" />
+    <Content Include="img\resized\Image336.JPG" />
+    <Content Include="img\resized\Image337.JPG" />
+    <Content Include="img\resized\Image338.JPG" />
+    <Content Include="img\resized\Image339.JPG" />
+    <Content Include="img\resized\Image34.JPG" />
+    <Content Include="img\resized\Image340.JPG" />
+    <Content Include="img\resized\Image341.JPG" />
+    <Content Include="img\resized\Image342.JPG" />
+    <Content Include="img\resized\Image343.JPG" />
+    <Content Include="img\resized\Image344.JPG" />
+    <Content Include="img\resized\Image345.JPG" />
+    <Content Include="img\resized\Image346.JPG" />
+    <Content Include="img\resized\Image347.JPG" />
+    <Content Include="img\resized\Image348.JPG" />
+    <Content Include="img\resized\Image349.JPG" />
+    <Content Include="img\resized\Image35.JPG" />
+    <Content Include="img\resized\Image36.JPG" />
+    <Content Include="img\resized\Image37.JPG" />
+    <Content Include="img\resized\Image38.JPG" />
+    <Content Include="img\resized\Image39.JPG" />
+    <Content Include="img\resized\Image40.JPG" />
+    <Content Include="img\resized\Image41.JPG" />
+    <Content Include="img\resized\Image42.JPG" />
+    <Content Include="img\resized\Image43.JPG" />
+    <Content Include="img\resized\Image44.JPG" />
+    <Content Include="img\resized\Image45.JPG" />
+    <Content Include="img\resized\Image46.JPG" />
+    <Content Include="img\resized\Image47.JPG" />
+    <Content Include="img\resized\Image48.JPG" />
+    <Content Include="img\resized\Image49.JPG" />
+    <Content Include="img\resized\Image50.JPG" />
+    <Content Include="img\resized\Image51.JPG" />
+    <Content Include="img\resized\Image52.JPG" />
+    <Content Include="img\resized\Image53.JPG" />
+    <Content Include="img\resized\Image54.JPG" />
+    <Content Include="img\resized\Image55.JPG" />
+    <Content Include="img\resized\Image56.JPG" />
+    <Content Include="img\resized\Image57.JPG" />
+    <Content Include="img\resized\Image58.JPG" />
+    <Content Include="img\resized\Image59.JPG" />
+    <Content Include="img\resized\Image60.JPG" />
+    <Content Include="img\resized\Image61.JPG" />
+    <Content Include="img\resized\Image62.JPG" />
+    <Content Include="img\resized\Image63.JPG" />
+    <Content Include="img\resized\Image64.JPG" />
+    <Content Include="img\resized\Image65.JPG" />
+    <Content Include="img\resized\Image66.JPG" />
+    <Content Include="img\resized\Image67.JPG" />
+    <Content Include="img\resized\Image68.JPG" />
+    <Content Include="img\resized\Image69.JPG" />
+    <Content Include="img\resized\Image70.JPG" />
+    <Content Include="img\resized\Image71.JPG" />
+    <Content Include="img\resized\Image72.JPG" />
+    <Content Include="img\resized\Image73.JPG" />
+    <Content Include="img\resized\Image74.JPG" />
+    <Content Include="img\resized\Image75.JPG" />
+    <Content Include="img\resized\Image76.JPG" />
+    <Content Include="img\resized\Image77.JPG" />
+    <Content Include="img\resized\Image78.JPG" />
+    <Content Include="img\resized\Image79.JPG" />
+    <Content Include="img\resized\Image80.JPG" />
+    <Content Include="img\resized\Image81.JPG" />
+    <Content Include="img\resized\Image82.JPG" />
+    <Content Include="img\resized\Image83.JPG" />
+    <Content Include="img\resized\Image84.JPG" />
+    <Content Include="img\resized\Image85.JPG" />
+    <Content Include="img\resized\Image86.JPG" />
+    <Content Include="img\resized\Image87.JPG" />
+    <Content Include="img\resized\Image88.JPG" />
+    <Content Include="img\resized\Image89.JPG" />
+    <Content Include="img\resized\Image90.JPG" />
+    <Content Include="img\resized\Image91.JPG" />
+    <Content Include="img\resized\Image92.JPG" />
+    <Content Include="img\resized\Image93.JPG" />
+    <Content Include="img\resized\Image94.JPG" />
+    <Content Include="img\resized\Image95.JPG" />
+    <Content Include="img\resized\Image96.JPG" />
+    <Content Include="img\resized\Image97.JPG" />
+    <Content Include="img\resized\Image98.JPG" />
+    <Content Include="img\resized\Image99.JPG" />
+    <Content Include="img\rte.png" />
+    <Content Include="img\safran.png" />
+    <Content Include="img\selected\raw\Image01.JPG" />
+    <Content Include="img\selected\raw\Image02.JPG" />
+    <Content Include="img\selected\raw\Image03.JPG" />
+    <Content Include="img\selected\raw\Image04.JPG" />
+    <Content Include="img\selected\raw\Image05.JPG" />
+    <Content Include="img\selected\raw\Image06.JPG" />
+    <Content Include="img\selected\raw\Image07.JPG" />
+    <Content Include="img\selected\raw\Image08.JPG" />
+    <Content Include="img\selected\raw\Image09.JPG" />
+    <Content Include="img\selected\raw\Image10.JPG" />
+    <Content Include="img\selected\raw\Image11.JPG" />
+    <Content Include="img\selected\raw\Image12.JPG" />
+    <Content Include="img\selected\raw\Image13.JPG" />
+    <Content Include="img\selected\raw\Image14.JPG" />
+    <Content Include="img\selected\raw\Image15.JPG" />
+    <Content Include="img\selected\resized\Image01.JPG" />
+    <Content Include="img\selected\resized\Image02.JPG" />
+    <Content Include="img\selected\resized\Image03.JPG" />
+    <Content Include="img\selected\resized\Image04.JPG" />
+    <Content Include="img\selected\resized\Image05.JPG" />
+    <Content Include="img\selected\resized\Image06.JPG" />
+    <Content Include="img\selected\resized\Image07.JPG" />
+    <Content Include="img\selected\resized\Image08.JPG" />
+    <Content Include="img\selected\resized\Image09.JPG" />
+    <Content Include="img\selected\resized\Image10.JPG" />
+    <Content Include="img\selected\resized\Image11.JPG" />
+    <Content Include="img\selected\resized\Image12.JPG" />
+    <Content Include="img\selected\resized\Image13.JPG" />
+    <Content Include="img\selected\resized\Image14.JPG" />
+    <Content Include="img\selected\resized\Image15.JPG" />
+    <Content Include="img\sempariscene.jpeg" />
+    <Content Include="img\sonepar.jpg" />
+    <Content Include="img\twitter.png" />
+    <Content Include="img\viadeo.png" />
+    <Content Include="img\vnext.png" />
+    <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="Pages\contact.html" />
+    <Content Include="Pages\portefolio.html" />
+    <Content Include="Pages\resume.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56828</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56828/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

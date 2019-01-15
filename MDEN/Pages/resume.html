@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mafyou's CV</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta property="og:image" content="../img/favicon.ico" />
+    <meta property="og:title" content="Mafyou's CV'" />
+    <meta property="og:description" content="Find who I am on business" />
+    <link rel="image_src" href="http://mafyou.fr/img/m.jpg" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="icon" href="../img/favicon.ico" />
+</head>
+<body ng-app="myApp" class="website-content">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="nav navbar-nav" style="width: 600px;">
+                <a class="navbar-brand" href="#">
+                    Home
+                </a>
+                <a class="navbar-brand" href="../Pages/portefolio.html">
+                    PorteFolio
+                </a>
+                <a class="navbar-brand" href="../Pages/resume.html">
+                    Resume
+                </a>
+                <a class="navbar-brand" href="../Pages/contact.html">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div id="intro">
+        <div id="presentation" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 align="center">SharePoint Developper</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img class="../img-circle" src="../img/me.jpg" width="80" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;font-weight: bold">
+                    <p>Since the beginning of my career, I have continually learned new technologies to meet the needs of my clients. I take great pleasure in learning new functionalities that meet the demands of my customers. In order to achieve this purpose, four years ago I join the SharePoint development team. </p>
+                    <p>I now mostly work with Application Page, WebParts and technical architecture.</p>
+                    <p>At the same time, thanks to the constant updates of SharePoint, I am now learning more and more about SharePoint Framework, and I also have started working on Bootstrap and AngularJS.</p>
+                    <p>You will find on this webpage my achievements. Please feel free to contact me if you have questions or interested in working with me.</p>
+                    <p>Yours faithfully, Mathieu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="missions" ng-controller="MissionsController" class="bg-black">
+        <div class="container">
+            <div class="col-md-4">
+                <a href="#popin1" id="CGI">
+                    <h1>CGI</h1>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#popin2" id="Hawaii">
+                    <h1>Hawaii</h1>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#popin3" id="vNext">
+                    <h1>vNext</h1>
+                </a>
+            </div>
+        </div>
+
+        <div id="popin1" class="cgi smart-popin" style="z-index: 99000;">
+            <div class="sp-table">
+                <div class="sp-body container">
+                    <a href="#" class="sp-close">×</a>
+                    <section class="mission row cgi" ng-repeat="mission in missions.CGI">
+                        <div my-Mission></div>
+                    </section>
+                    <a href="#" class="sp-back"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="popin2" class="hawaii smart-popin" style="z-index: 99000;">
+            <div class="sp-table">
+                <div class="sp-body container">
+                    <a href="#" class="sp-close">×</a>
+                    <section class="mission row Hawaii" ng-repeat="mission in missions.Hawaii">
+                        <div my-Mission></div>
+                    </section>
+                    <a href="#" class="sp-back"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="popin3" class="vNext smart-popin" style="z-index: 99000;">
+            <div class="sp-table">
+                <div class="sp-body container">
+                    <a href="#" class="sp-close">×</a>
+                    <section class="mission row vNeXt" ng-repeat="mission in missions.vNext">
+                        <div my-Mission></div>
+                    </section>
+                    <a href="#" class="sp-back"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray">
+        <div id="abilities" class="container" ng-controller="AbilitiesController">
+            <h2>Abilities</h2>
+            <p class="lead">Power without knowledge worth nothing.</p>
+            <hr />
+            <h3>Skills</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="no-bullets">
+                        <li ng-repeat="ability in skillsLeft">
+                            <span class="ability-title">{{ability.name}}</span>
+                            <span class="ability-score">
+                                <span ng-repeat="i in getNumber(ability.level) track by $index" class="glyphicon glyphicon-star filled"></span>
+                                <span ng-repeat="i in getNumber(5-ability.level) track by $index" class="glyphicon glyphicon-star"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="no-bullets">
+                        <li ng-repeat="ability in skillsRight">
+                            <span class="ability-title">{{ability.name}}</span>
+                            <span class="ability-score">
+                                <span ng-repeat="i in getNumber(ability.level) track by $index" class="glyphicon glyphicon-star filled"></span>
+                                <span ng-repeat="i in getNumber(5-ability.level) track by $index" class="glyphicon glyphicon-star"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <h3>Languages</h3>
+            <div class="row" ng-controller="AbilitiesController">
+                <div class="col-md-6">
+                    <ul class="no-bullets">
+                        <li ng-repeat="ability in languages">
+                            <span class="ability-title">{{ability.name}}</span>
+                            <span class="ability-score">
+                                <span ng-repeat="i in getNumber(ability.level) track by $index" class="glyphicon glyphicon-star filled"></span>
+                                <span ng-repeat="i in getNumber(5-ability.level) track by $index" class="glyphicon glyphicon-star"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <h3>Tools</h3>
+            <div class="row" ng-controller="AbilitiesController">
+                <div class="col-md-6">
+                    <ul class="no-bullets">
+                        <li ng-repeat="ability in toolsLeft">
+                            <span class="ability-title">{{ability.name}}</span>
+                            <span class="ability-score">
+                                <span ng-repeat="i in getNumber(ability.level) track by $index" class="glyphicon glyphicon-star filled"></span>
+                                <span ng-repeat="i in getNumber(5-ability.level) track by $index" class="glyphicon glyphicon-star"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="no-bullets">
+                        <li ng-repeat="ability in toolsRight">
+                            <span class="ability-title">{{ability.name}}</span>
+                            <span class="ability-score">
+                                <span ng-repeat="i in getNumber(ability.level) track by $index" class="glyphicon glyphicon-star filled"></span>
+                                <span ng-repeat="i in getNumber(5-ability.level) track by $index" class="glyphicon glyphicon-star"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+    <footer div class="bg-burn">
+        <div id="contact" class="container">
+            <h2>Contact</h2>
+            <p class="lead">What's up?!</p>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="no-bullets">
+                        <li>
+                            <a href="https://github.com/mafyou" target="_blank">
+                                <p style="word-wrap: break-word;"><img src="../img/git.svg" class="icon" />GitHub</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/mdupleix/" target="_blank">
+                                <p style="word-wrap: break-word;"><img src="../img/linkedin.png" class="icon" />www.linkedin.com/in/mdupleix</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:mdupleix@hotmail.com" target="_blank">
+                                <p style="word-wrap: break-word;"><img src="../img/mailto.png" class="icon" />mdupleix@hotmail.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="downloadable/CV - MDUP - Developpeur SharePoint - 2018.pdf" target="_blank">
+                                <p><img src="../img/pdf.png" class="icon" />French CV</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
+    <script src="../js/app.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96928725-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-96928725-3');
+    </script>
+</body>
+</html>
