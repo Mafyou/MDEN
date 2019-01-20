@@ -842,6 +842,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\MafyouCV - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\MafyouCV - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
