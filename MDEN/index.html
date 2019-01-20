@@ -41,24 +41,60 @@
 
     <div id="missions" ng-controller="MissionsController" class="bg-black">
         <div class="container">
+            <div class="col-md-6">
+                <a href="#popin1" id="IdeaStudio">
+                    <h1>IdeaStudio</h1>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#popin2" id="Astek">
+                    <h1>Astek</h1>
+                </a>
+            </div>
+        </div>
+        <div class="container">
             <div class="col-md-4">
-                <a href="#popin1" id="CGI">
+                <a href="#popin3" id="CGI">
                     <h1>CGI</h1>
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="#popin2" id="Hawaii">
+                <a href="#popin4" id="Hawaii">
                     <h1>Hawaii</h1>
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="#popin3" id="vNext">
+                <a href="#popin5" id="vNext">
                     <h1>vNext</h1>
                 </a>
             </div>
         </div>
 
         <div id="popin1" class="cgi smart-popin" style="z-index: 99000;">
+            <div class="sp-table">
+                <div class="sp-body container">
+                    <a href="#" class="sp-close">×</a>
+                    <section class="mission row ideastudio" ng-repeat="mission in missions.IdeaStudio">
+                        <div my-Mission></div>
+                    </section>
+                    <a href="#" class="sp-back"></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="popin2" class="cgi smart-popin" style="z-index: 99000;">
+            <div class="sp-table">
+                <div class="sp-body container">
+                    <a href="#" class="sp-close">×</a>
+                    <section class="mission row astek" ng-repeat="mission in missions.Astek">
+                        <div my-Mission></div>
+                    </section>
+                    <a href="#" class="sp-back"></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="popin3" class="cgi smart-popin" style="z-index: 99000;">
             <div class="sp-table">
                 <div class="sp-body container">
                     <a href="#" class="sp-close">×</a>
@@ -71,7 +107,7 @@
         </div>
 
 
-        <div id="popin2" class="hawaii smart-popin" style="z-index: 99000;">
+        <div id="popin4" class="hawaii smart-popin" style="z-index: 99000;">
             <div class="sp-table">
                 <div class="sp-body container">
                     <a href="#" class="sp-close">×</a>
@@ -84,7 +120,7 @@
         </div>
 
 
-        <div id="popin3" class="vNext smart-popin" style="z-index: 99000;">
+        <div id="popin5" class="vNext smart-popin" style="z-index: 99000;">
             <div class="sp-table">
                 <div class="sp-body container">
                     <a href="#" class="sp-close">×</a>

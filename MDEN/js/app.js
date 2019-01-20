@@ -2,7 +2,56 @@ var app = angular.module('myApp', ['ngSanitize']);
 
 app.controller('MissionsController', ['$scope', '$sce',
 	function ContentCtrl($scope, $sce) {
-		$scope.missions = {};
+        $scope.missions = {};
+        $scope.missions.IdeaStudio =
+            [
+                {
+                    "title": "Migration from SharePoint 2010 to 2013",
+                    "description": "<p>Goal is to migrate custom data</p>",
+                    "skills": [
+                        {
+                            "name": "SharePoint 2010",
+                            "percent": "50",
+                            "progressColor": "progress-bar-success"
+
+                        },
+                        {
+                            "name": "SharePoint 2013",
+                            "percent": "50",
+                            "progressColor": "progress-bar-success"
+
+                        }
+                    ],
+                    "technics": ["PoweShell"],
+                    "period": "11/2018 to 02/2019",
+                    "imgCustomer": "../img/axa.png",
+                    "imgFirm": "../img/ideastudio.png"
+                }
+            ];
+        $scope.missions.Astek =
+            [
+                {
+                    "title": "Scan datas",
+                    "description": "<p>Goal is scan their process to a internal portal</p>",
+                    "skills": [
+                        {
+                            "name": "SharePoint 2016",
+                            "percent": "80",
+                            "progressColor": "progress-bar-success"
+
+                        },
+                        {
+                            "name": "Doc",
+                            "percent": "20",
+                            "progressColor": "progress-bar-info"
+                        }
+                    ],
+                    "technics": ["Application Page", "Search WebPart", "jQuery"],
+                    "period": "04/2018 to 10/2018",
+                    "imgCustomer": "../img/anru.jpg",
+                    "imgFirm": "../img/astek.png"
+                }
+            ];
 		$scope.missions.CGI = 
 		[
 			{
@@ -48,7 +97,7 @@ app.controller('MissionsController', ['$scope', '$sce',
 					}
 				],
 				"technics": ["WebParts", "Application Page", "Packaging", "Architecture."],
-				"period" : "05/2015 to now",
+				"period" : "05/2015 to 11/2017",
 				"imgCustomer" : "../img/ladef.jpg",
 				"imgFirm" : "../img/cgi.png"
 			},

@@ -71,7 +71,10 @@
     <Content Include="css\portefolio.css" />
     <Content Include="css\style.css" />
     <Content Include="img\adp.svg" />
+    <Content Include="img\anru.jpg" />
+    <Content Include="img\astek.png" />
     <Content Include="img\avanade.jpg" />
+    <Content Include="img\axa.png" />
     <Content Include="img\cgi.png" />
     <Content Include="img\educ.png" />
     <Content Include="img\eurovia.png" />
@@ -81,6 +84,7 @@
     <Content Include="img\fg-vNext.png" />
     <Content Include="img\git.svg" />
     <Content Include="img\hawaii.jpg" />
+    <Content Include="img\ideastudio.png" />
     <Content Include="img\ladef.jpg" />
     <Content Include="img\linkedin.png" />
     <Content Include="img\loreal.jpg" />

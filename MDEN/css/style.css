@@ -30,6 +30,12 @@ a#CGI > h1 {
     background-color: #CC0033;
     cursor: pointer;
 }
+a#Astek > h1 {
+    background-color: #00A45B;
+}
+a#IdeaStudio > h1 {
+    background-color: #004A8C;
+}
 
 div#CGI, div#Hawaii, div#vNext {
     margin-top: -20px;
