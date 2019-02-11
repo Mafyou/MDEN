@@ -403,98 +403,102 @@ app.controller('MissionsController', ['$scope', '$sce',
 	};
 });
 
-app.controller('AbilitiesController', ['$scope', function($scope) {
+app.controller('AbilitiesController', ['$scope', function ($scope) {
     $scope.getNumber = function (num) {
         return new Array(num);
     };
-			  $scope.skillsLeft = [
-						{
-							name: 'SharePoint',
-							level: 5
-						},
-						{
-							name: 'C#',
-							level: 4
-						},
-						{
-							name: 'ASP.NET',
-							level: 4
-						},
-						{
-							name: 'Web Langages (HTML/CSS)',
-							level: 4
-						},
-						{
-							name: 'JavaScript (jQuery, Angular, ClientContext)',
-							level: 4
-						},
-						{
-							name: 'Powershell',
-							level: 3
-						},
-				  ];
-			  $scope.skillsRight = [
-						{
-							name: 'SQL',
-							level: 2
-						},
-						{
-							name: 'PHP',
-							level: 2
-						},
-						{
-							name: 'XML',
-							level: 3
-						},
-						{
-							name: 'JSON',
-							level: 4
-						},
-						{
-							name: 'UML',
-							level: 2
-						}
-				  ];
-			  $scope.languages = [
-						{
-							name: 'French (Mother tongue)',
-							level: 5
-						},
-						{
-							name: 'English',
-							level: 4
-						}
-				]
-				$scope.toolsLeft = [
-						{
-							name: 'Visual Studio',
-							level: 5
-						},
-						{
-							name: 'Visual Studio Code',
-							level: 3
-						},
-						{
-							name: 'TFS (Branch, Merge, Commit)',
-							level: 4
-						},
-						{
-							name: 'Notepad++',
-							level: 4
-						}
-				  ];
-			  $scope.toolsRight = [
-						{
-							name: 'Office (Word/PowerPoint/Outlook)',
-							level: 4
-						},
-						{
-							name: 'Filezilla',
-							level: 4
-						},
-						{
-							name: 'Chrome & Firefox',
-							level: 4
-						}
-				  ];
-			}]);
+    $scope.skillsLeft = [
+        {
+            name: 'SharePoint',
+            level: 5
+        },
+        {
+            name: 'C#',
+            level: 4
+        },
+        {
+            name: 'ASP.NET',
+            level: 4
+        },
+        {
+            name: 'Web Langages (HTML/CSS)',
+            level: 4
+        },
+        {
+            name: 'JavaScript (jQuery, AngularJS, ClientContext)',
+            level: 4
+        },
+        {
+            name: 'PowerShell',
+            level: 4
+        }
+    ];
+    $scope.skillsRight = [
+        {
+            name: 'SQL',
+            level: 3
+        },
+        {
+            name: 'PHP',
+            level: 2
+        },
+        {
+            name: 'XML',
+            level: 3
+        },
+        {
+            name: 'JSON',
+            level: 4
+        },
+        {
+            name: 'UML',
+            level: 2
+        },
+        {
+            name: 'React',
+            level: 2
+        }
+    ];
+    $scope.languages = [
+        {
+            name: 'French (Mother tongue)',
+            level: 5
+        },
+        {
+            name: 'English',
+            level: 4
+        }
+    ];
+    $scope.toolsLeft = [
+        {
+            name: 'Visual Studio',
+            level: 5
+        },
+        {
+            name: 'Visual Studio Code',
+            level: 3
+        },
+        {
+            name: 'TFS (Branch, Merge, Commit)',
+            level: 4
+        },
+        {
+            name: 'Android Studio',
+            level: 3
+        }
+    ];
+    $scope.toolsRight = [
+        {
+            name: 'Office (Word/PowerPoint/Outlook)',
+            level: 4
+        },
+        {
+            name: 'Filezilla',
+            level: 4
+        },
+        {
+            name: 'Chrome & Firefox',
+            level: 4
+        }
+    ];
+}]);
