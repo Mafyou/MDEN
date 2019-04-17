@@ -6,6 +6,28 @@ app.controller('MissionsController', ['$scope', '$sce',
         $scope.missions.IdeaStudio =
             [
                 {
+                    "title": "TMA on portals",
+                    "description": "<p>Correct bugs and make evolutions</p>",
+                    "skills": [
+                        {
+                            "name": "Store Procedure",
+                            "percent": "80",
+                            "progressColor": "progress-bar-success"
+
+                        },
+                        {
+                            "name": "C#",
+                            "percent": "20",
+                            "progressColor": "progress-bar-success"
+
+                        }
+                    ],
+                    "technics": ["SQL", ".NET"],
+                    "period": "04/2019 to now",
+                    "imgCustomer": "../img/unif.png",
+                    "imgFirm": "../img/ideastudio.png"
+                },
+                {
                     "title": "Migration from SharePoint 2010 to 2013",
                     "description": "<p>Goal is to migrate custom data</p>",
                     "skills": [

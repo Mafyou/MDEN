@@ -90,9 +90,9 @@
     <Content Include="img\loreal.jpg" />
     <Content Include="img\m.jpg" />
     <Content Include="img\mailto.png" />
-    <Content Include="img\me.png" />
     <Content Include="img\onisep.png" />
     <Content Include="img\pdf.png" />
+    <Content Include="img\pic.jpg" />
     <Content Include="img\raw\Image01.JPG" />
     <Content Include="img\raw\Image02.JPG" />
     <Content Include="img\raw\Image03.JPG" />
@@ -826,6 +826,7 @@
     <Content Include="img\sempariscene.jpeg" />
     <Content Include="img\sonepar.jpg" />
     <Content Include="img\twitter.png" />
+    <Content Include="img\unif.png" />
     <Content Include="img\viadeo.png" />
     <Content Include="img\vnext.png" />
     <Content Include="index.html" />
